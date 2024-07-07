@@ -1,0 +1,79 @@
+:root {
+    --white: #f1f1f1;
+    --black: #1f1f1f;
+    --color-1: #a8f368;
+    --color-2: #bcde9e;
+    --color-3: #f9035e;
+    --color-4: #a0305a;
+    --gradient: linear-gradient(40deg, var(--color-1), var(--color-3));
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+}
+
+body {
+    height: 100vh;
+    background-image: var(--gradient);
+    font-family: Tahoma, Arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: -2px 2px 3px;
+}
+
+.main-box {
+    padding: 1rem;
+    margin-top: 10px;
+    border: 2px solid var(--black);
+    border-radius: 6px;
+
+    & strong {
+        font-size: 3rem;
+        text-shadow: -2px 2px 3px;
+    }
+
+    .box {
+        text-align: center;
+
+        & button {
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            font-weight: bold;
+            font-size: 15px;
+            border: 1px solid;
+            border-radius: 50%;
+            transition: .3s linear;
+        }
+        & button:not(:last-of-type) {
+            margin-right: 10px;
+        }
+        & button:nth-child(1):hover {
+            background-color: var(--color-1);
+        }
+        & button:nth-child(1):active {
+            transform: scale(94%);
+        }
+        & button:nth-child(2):hover {
+            background-color: var(--color-3);
+        }
+        & button:nth-child(2):active {
+            transform: scale(94%);
+        }
+        & button:nth-child(3):hover {
+            background-color: var(--color-2);
+        }
+        & button:nth-child(3):active {
+            transform: scale(94%);
+        }
+    }
+}
